@@ -1,6 +1,6 @@
-import Event
-import Node
-import re 
+import Event   #event class
+import Node    #node class
+import re      #regular expressions
 
 #Assume that Logs have just been uploaded and parsed and there is a list of events
 eventList = []
