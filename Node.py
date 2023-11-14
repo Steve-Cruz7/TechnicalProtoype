@@ -1,4 +1,4 @@
-#Assuming that each node will have a color (determined by team), list of connections, timestamp, log information
+#Assuming that each node will have some color (determined by team), list of connections, timestamp, log information
 
 class Node:
     def __init__(self, color, connections, timeStamp, logInfo):

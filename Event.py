@@ -1,4 +1,4 @@
-#In this prototype, an event will consist of a time stamp, log info, and team association
+#In this prototype, an event will consist of a time stamp, log info, and team 
 
 class Event:
     def __init__(self, timeStamp, logInfo, teamAssociation):
