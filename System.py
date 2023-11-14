@@ -14,18 +14,18 @@ eventList.append(eventThree)
 nodeList = []
 for event in eventList:
     #Creating list of nodes from events
-    nodeList.append(Node.Node(event.teamAssociation, [], event.timeStamp, event.logInfo))
+    nodeList.append(Node.Node(event.getYeamAssociation, [], event.getTimeStamp, event.getLogInfo))
 
 compareNodeList = nodeList
 
 #compare nodes by converting time to a 6 digit number and measure absolute value of difference
 for node in nodeList:
-    nodeTime = re.split(":", node.timeStamp)
+    nodeTime = re.split(":", node.getTimeStamp)
     nodeTimeRep = int(nodeTime[0])*10000
     nodeTimeRep = nodeTimeRep + int(nodeTime[1])*100
     nodeTimeRep = nodeTimeRep + int(nodeTime[2])
     for compareNode in compareNodeList:
-        cNodeTime = re.split(compareNode.timeStamp, ":")
+        cNodeTime = re.split(compareNode.getTimeStamp, ":")
         cNodeTimeRep = int(nodeTime[0])*10000
         cNodeTimeRep = nodeTimeRep + int(nodeTime[1])*100
         cNodeTimeRep = nodeTimeRep + int(nodeTime[2])
@@ -33,8 +33,10 @@ for node in nodeList:
             if(abs(nodeTimeRep - cNodeTimeRep) < 5000):
                 node.connections.append(compareNode)
 
-print(nodeList[0].timeStamp)         
-print(nodeList[0].connections[0].timeStamp)  
+print(nodeList[0].getTimeStamp)         
+print(nodeList[0].connections[0].getTimeStamp)  
+
+
 
 #Essentially, this implementation checks for how close the events were in happening by their time stamp
 #This would be the default setup for the graph nodes but can be changed if they are inaccurate

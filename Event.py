@@ -8,3 +8,25 @@ class Event:
 
     def __str__(self):
         return "Time Occured: {self.timeStamp} \n Info: {self.logInfo} \n Team: {self.teamAssociation}"
+
+    # Setters
+    def setTimeStamp(self, new):
+        self.timeStamp = new
+
+    def setlogInfo(self, new):
+        self.logInfo = new
+
+    def setTeamAssociation(self, new):
+        self.teamAssociation = new
+
+    # getters
+
+    def getTimeStamp(self):
+        return self.timeStamp
+    
+    def getlogInfo(self):
+        return self.logInfo
+    
+    def getTeamAssociation(self):
+        return self.teamAssociation
+    
